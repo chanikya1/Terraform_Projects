@@ -82,7 +82,7 @@ Type `yes` to confirm the deployment.
 
 ---
 
-## 🌐 Access Your Load Balanced Web App
+## Access Your Load Balanced Web App
 
 After deployment:
 
@@ -97,7 +97,7 @@ http://<load_balancer_ip>
 
 ---
 
-## 🧼 Cleanup
+## Cleanup
 
 To delete all resources:
 

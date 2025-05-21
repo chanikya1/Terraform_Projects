@@ -56,26 +56,24 @@ Run this once to set up the Terraform provider and download required modules:
 terraform init
 ```
 
+## Optional Checks Before You Apply
+
+It's a good idea to run these checks to catch mistakes early:
+
+```bash
+# Validate your configuration syntax
+terraform validate
+
+# Format your Terraform files
+terraform fmt 
+```
+
 ### 4. Preview what will be created
 
 Check the plan before applying:
 
 ```bash
 terraform plan
-```
-
----
-
-## Optional Checks Before You Apply
-
-It's a good idea to run these checks to catch mistakes early:
-
-```bash
-# Format your Terraform files
-terraform fmt 
-
-# Validate your configuration syntax
-terraform validate
 ```
 
 ### 5. Deploy everything

@@ -8,33 +8,6 @@ This project automates the setup of a secure and scalable GCP networking environ
 
 ---
 
-## Architecture
-
-                  ┌────────────────────────────────────────┐
-                  │          Google Cloud Project          │
-                  └────────────────────────────────────────┘
-                                ↓
-                         ┌────────────┐
-                         │  VPC Name  │
-                         │  secure-vpc│
-                         └────────────┘
-                           ↓        ↓
-                  ┌────────────┐ ┌────────────┐
-                  │ Subnet A   │ │ Subnet B   │
-                  │ (Private)  │ │ (Public)   │
-                  └────────────┘ └────────────┘
-                     ↓                    ↓
-         ┌────────────────────┐   ┌─────────────────────┐
-         │ Internal VMs       │   │ External Load Balancer│
-         └────────────────────┘   └─────────────────────┘
-
-IAM:
-- Principle of least privilege
-- Custom roles for devs, admins
-- Audit logging enabled
-
----
-
 ## Key Features
 
 - **Custom VPC** with separate public and private subnets
@@ -101,21 +74,6 @@ terraform apply
 ```
 
 Type `yes` to confirm the deployment.
-
----
-
-## Access Your Load Balanced Web App
-
-After deployment:
-
-```bash
-terraform output load_balancer_ip
-```
-
-Copy the IP and open it in your browser:
-```
-http://<load_balancer_ip>
-```
 
 ---
 
